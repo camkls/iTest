@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ace.dao.IStudentDAO">
+    <select id="findAllStudent" resultType="cn.ace.vo.Student">
+        select stu_id stuId , stu_num stuNum , stu_name stuName , stu_gender stuGender,
+                stu_age stuAge , stu_edu stuEdu , stu_class stuClass , stu_credit stuCredit
+        from t_student
+    </select>
+
+    <select id="findStudentById" resultType="cn.ace.vo.Student" parameterType="java.lang.Integer">
+        select stu_id stuId , stu_num stuNum , stu_name stuName , stu_gender stuGender,
+                stu_age stuAge , stu_edu stuEdu , stu_class stuClass , stu_credit stuCredit
+        from t_student
+        where stu_id = #{stuId}
+    </select>
+
+    <select id="getPrimaryKey" resultType="java.lang.String">
+        select
+            max(stu_num+1) as stuNum
+        from
+            t_student
+    </select>
+
+    <insert id="insert" parameterType="cn.ace.vo.Student">
+        insert into t_student
+                (stu_num, stu_name, stu_gender,
+                stu_age, stu_edu, stu_class, stu_credit)
+        values
+	    (#{stuNum},#{stuName},#{stuGender},#{stuAge},#{stuEdu},#{stuClass},#{stuCredit})
+    </insert>
+
+
+</mapper>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ace.dao.ITeacherDao">
+    <select id="login" resultType="cn.ace.vo.Teacher">
+        select t_id as tid,t_username as username,t_password as password
+        from t_teacher
+        where t_username = #{username} and t_password = #{password}
+    </select>
+</mapper>

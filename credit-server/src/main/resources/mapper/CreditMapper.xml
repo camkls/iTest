@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ace.dao.ICreditDAO">
+    <select id="creditDetails" resultType="cn.ace.vo.Credit">
+        SELECT
+            cre_id creId,
+            cre_score creScore,
+            cre_reason creReason,
+            cre_date creDate,
+            stu_id stuId
+        FROM
+            t_credit
+        WHERE
+            stu_id = #{stuId}
+    </select>
+
+    <insert id="penalties" parameterType="cn.ace.vo.Credit">
+        insert into t_credit
+                (cre_score, cre_reason, cre_date,stu_id)
+        values
+	    (#{creScore},#{creReason},#{creDate},#{stuId})
+    </insert>
+
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SMS.iml" filepath="$PROJECT_DIR$/SMS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/credit-server/credit-server.iml" filepath="$PROJECT_DIR$/credit-server/credit-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/customer/customer.iml" filepath="$PROJECT_DIR$/customer/customer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/student-server/student-server.iml" filepath="$PROJECT_DIR$/student-server/student-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/teacher-server/teacher-server.iml" filepath="$PROJECT_DIR$/teacher-server/teacher-server.iml" />
+    </modules>
+  </component>
+</project>
